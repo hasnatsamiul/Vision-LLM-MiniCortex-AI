@@ -1,0 +1,10 @@
+services:
+  minicortex-api:
+    build: .
+    container_name: minicortex-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs
