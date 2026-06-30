@@ -13,8 +13,6 @@ The project includes:
 
 ## Project Structure
 
-```text
-## Project Structure
 
 ```text
 MiniCortex AI/
