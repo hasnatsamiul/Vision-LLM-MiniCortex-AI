@@ -59,9 +59,9 @@ The API key is loaded using `python-dotenv` and is never hardcoded in the source
 
 ---
 
-## Task 1: Core Python Inspection Service
+## Core Python Inspection Service
 
-Task 1 is implemented in:
+This task  is implemented in:
 
 ```text
 src/inspector.py
@@ -78,7 +78,7 @@ The service returns a structured JSON result containing:
 * recommendation
 * processing time in milliseconds
 
-### Why I Chose Option C
+### Why I Chose LLM Vision Approach
 
 I chose the LLM Vision approach because MiniCorteX is designed to provide AI-based product inspection and conversational defect analysis. Using a vision-capable LLM allows the system to detect different types of visible defects without training a custom model.
 
@@ -96,7 +96,7 @@ The unit test mocks the LLM response instead of calling the real Groq API. This 
 
 ---
 
-## Task 2: LLM Conversational Insight Layer
+## Feature 2: LLM Conversational Insight Layer
 
 Task 2 is implemented in:
 
@@ -120,17 +120,8 @@ If the LLM API is unavailable, missing, or returns an error, the system returns 
 
 ---
 
-## Task 3: Tech Lead Simulation
 
-The file `LEAD_NOTES.md` contains the Tech Lead simulation response. It includes:
-
-* team task breakdown
-* risk log
-* improvement plan for two extra days
-
----
-
-## Task 4: FastAPI Endpoint, CSV Logging, and Docker
+## Feature 3: FastAPI Endpoint, CSV Logging, and Docker
 
 Task 4 is implemented in:
 
@@ -269,6 +260,15 @@ The `.env` file should not be pushed to GitHub. A safe template is provided in:
 
 ---
 
+## Future Task
+
+The file `LEAD_NOTES.md` contains the Tech Lead simulation response. It includes:
+
+* risk log
+* improvement plan
+
+---
+
 ## Dependencies
 
 Main dependencies:
@@ -284,7 +284,7 @@ Main dependencies:
 
 ## Design Decisions
 
-I kept the project structure simple and modular. `src/inspector.py` owns the core inspection logic for Task 1, `src/llm_insight.py` owns the manager-friendly LLM explanation for Task 2, and `src/api.py` exposes the workflow through FastAPI for Task 4.
+I kept the project structure simple and modular. `src/inspector.py` owns the core inspection logic for Feature 1, `src/llm_insight.py` owns the manager-friendly LLM explanation for Feature 3, and `src/api.py` exposes the workflow through FastAPI for Feature 4.
 
 I used mocked LLM responses in the unit test so the test does not depend on network access, API cost, or external service availability.
 
@@ -292,20 +292,10 @@ For logging, I used a local CSV file because it is lightweight and easy to inspe
 
 ---
 
-## Time Log
-
-* Task 1: approximately 70 minutes
-* Task 2: approximately 50 minutes
-* Task 3: approximately 15 minutes
-* Task 4: approximately 35 minutes
-
-Total time: approximately 3 hours
-
----
 
 ## AI Tool Usage
 
-I used ChatGPT to help plan the project structure, design the inspection workflow, organize the modules, and review code structure. I manually implemented, tested, and verified the code, and I can explain each module and decision in the project.
+I used ChatGPT to help plan the project structure, design the inspection workflow, organize the modules, and review code structure. I manually implemented, tested, and verified the code. If you encounter any problems, please email me.
 
 
 ---
