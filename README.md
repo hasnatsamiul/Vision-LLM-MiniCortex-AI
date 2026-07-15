@@ -61,13 +61,13 @@ The API key is loaded using `python-dotenv` and is never hardcoded in the source
 
 ## Core Python Inspection Service
 
-This task  is implemented in:
+This feature is implemented in:
 
 ```text
 src/inspector.py
 ```
 
-For Task 1, I implemented an LLM Vision-based inspection service using Groq. The service accepts an image file path, validates the file, converts the image into base64, and sends it to a vision-capable LLM with a structured inspection prompt.
+For Feature 1, I implemented an LLM Vision-based inspection service using Groq. The service accepts an image file path, validates the file, converts the image into base64, and sends it to a vision-capable LLM with a structured inspection prompt.
 
 The service returns a structured JSON result containing:
 
